@@ -122,11 +122,6 @@ Light Box Styles
       padding: 2%; 
     }
   }
-
-/*styles for desktop */
-  @media (min-width: 1024px) {
-    
-    }
   
 /* ======= 
 Modal/Lightbox 

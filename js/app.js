@@ -1,32 +1,32 @@
 jQuery(document).ready(function($) {
 	
 	$('.lightbox_trigger').click(function(e) {
-	
+
     // prevent opening of new page 
     e.preventDefault(); 
 
-    //get the image 
-    var img_src = $(this).attr("src");
-    
-   if ($('#lightbox').length > 0) {
-     //place href as img src value 
-     $('#content').html('<img src="'); 
-     //show lightbox window 
-     $('#lightbox').show(); 
-   }
+    // grab the src attr value (get the image)
+  var img_src = $(e.target).attr("src");
 
-   else { //create HTML markup for lightbox window
-			var lightbox = 
-			'<div id="lightbox">' +
-				'<p>Click to close</p>' +
-				'<div id="content">' + 
-					'<img src=""/>' +
-				'</div>' +	
-      '</div>';
+    // set src value for lightbox window
+    var lightbox = 
+    '<div id="lightbox">' +
+      '<p>Click to close</p>' +
+        '<img src="' + img_src + '">'
+    '</div>';
+
+    // append the lightbox window 
+
+  //  if ($('#lightbox').length > 0) {
+  //    //place href as img src value 
+  //    $('#content').html('<img src="">'); 
+  //    //show lightbox window 
+  //    $('#lightbox').show(); 
+  //  }
       
-      //insert lightbox HTML into page
+      // append the lightbox window (insert lightbox HTML into page) 
 			$('body').append(lightbox);
-   }
+  //  }
   });
 
       //Click anywhere on the page to get rid of lightbox window
