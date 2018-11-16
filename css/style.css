@@ -24,6 +24,7 @@ li:not(:first-child):before {
 img { 
   max-width: 100%;
 }
+
 .img-cap { 
   font-size: 12px; 
   font-style: italic; 

@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
     // prevent opening of new page 
     e.preventDefault(); 
 
-    // grab the src attr value (get the image)
+    // grab the src attr value (get the image to make it appear)
   var img_src = $(e.target).attr("src");
 
     // set src value for lightbox window
@@ -26,13 +26,12 @@ jQuery(document).ready(function($) {
       
       // append the lightbox window (insert lightbox HTML into page) 
 			$('body').append(lightbox);
-  //  }
   });
 
-      //Click anywhere on the page to get rid of lightbox window
+    //Click anywhere on the page to get rid of lightbox window
 	$('#lightbox').live('click', function() { //must use live, as the lightbox element is inserted into the DOM
-		$('#lightbox').hide();
-	});
+		$('#lightbox').remove();
+  });
 
 });
 
